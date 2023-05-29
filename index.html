@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
     <title>Personal Dashboard | Gandhar</title>
 </head>
 <body>
     <div class="container">
         <div class="calendar">
-            <div class="month"></div>
+            <div class="month">February 2019</div>
             <div class="day">
                 <div>Su</div>
                 <div>Mo</div>
@@ -21,10 +20,11 @@
                 <div>Fr</div>
                 <div>Sa</div>
             </div>
-            <div class="cal-grid"></div>
-            <script src="make-calendar.js"/>
+            <div class="cal-grid" id="cal-grid"></div>
+            <script src="make-calendar.js"></script>
         </div>
-        <div class="time"></div>
+        <div class="clock" id="clock" onload="showTime()"></div>
+        <script src="clock.js"></script>
         <div class="todo"></div>
         <div class="emails"></div>
         <div class="budget"></div>

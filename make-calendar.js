@@ -1,7 +1,14 @@
-date_grid = document.getElementsByClassName('cal-grid')[0];
+console.log('make-calendar.js run');
 
-i = 0;
+function make_calendar() {
+    date_grid = document.getElementById('cal-grid');
 
-while(i < 28) {
-    date_grid.innerHTML += '<button>'+i+'</button>';
+    let i = 1;
+
+    while(i < 29) {
+        date_grid.innerHTML += '<div>'+i+'</div>';
+        i += 1;
+    }
 }
+
+make_calendar();
