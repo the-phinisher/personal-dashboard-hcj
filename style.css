@@ -1,11 +1,16 @@
-.calendar {
-    width: 25vw;
-    height: 25vw;
+.container {
+    display:grid;
+    gap:1.5rem;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .day, .cal-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar {
+    grid-column: span 2;
 }
 
 .cal-grid div:first-child {
