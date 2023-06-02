@@ -1,18 +1,84 @@
+body {
+    background-color: #1a1a1d;
+    font-family: 'Poppins', sans-serif;
+    color: #ededed;
+}
+
 .container {
     display:grid;
     gap:1.5rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.progress > div {
+    margin: 5%;
+}
+
+.progress-indicator {
+    --side: 10vw;
+    width: var(--side);
+    height: var(--side);
+    border-radius: 50%;
+    background: conic-gradient(#c3073f 43.2deg, #6f2232 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-indicator::before {
+    content: "";
+    position: absolute;
+    height: calc(var(--side) - 2rem);
+    width: calc(var(--side) - 2rem);
+    background-color: #4e4e50;
+    border-radius: 50%;
+}
+
+.progress-value {
+    position: relative;
+}
+
+.container > div {
+    background-color: #4e4e50;
+    border-radius: 0.8rem;
+    padding: 3%;
 }
 
 .day, .cal-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    width: 95%;
+    gap: 0.5rem;
+}
+
+.cal-day {
+    height: 3vw;
+    padding: 10%;
+    background-color:#6f2232 !important;
 }
 
 .calendar {
     grid-column: span 2;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .cal-grid div:first-child {
     grid-column: 6;
+}
+
+.emails {
+    grid-column: span 2;
+    grid-row: span 2;
 }

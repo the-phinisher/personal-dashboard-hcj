@@ -5,8 +5,8 @@ function make_calendar() {
 
     let i = 1;
 
-    while(i < 29) {
-        date_grid.innerHTML += '<div>'+i+'</div>';
+    while(i <= 31) {
+        date_grid.innerHTML += '<div class="cal-day">'+i+'</div>';
         i += 1;
     }
 }
