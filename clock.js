@@ -15,8 +15,8 @@
     m = (m < 10) ? "0" + m : m;  
     s = (s < 10) ? "0" + s : s;  
     var time = h + ":" + m + " " + session;  
-    document.getElementById("clock").innerText = time;  
-    document.getElementById("clock").textContent = time;  
+    document.getElementById("clock-text").innerText = time;  
+    document.getElementById("clock-text").textContent = time;  
     setTimeout(showTime, 1000);  
 }  
 showTime();  

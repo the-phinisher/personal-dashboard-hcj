@@ -1,3 +1,5 @@
+/* Overall styling */
+
 body {
     background-color: #1a1a1d;
     font-family: 'Poppins', sans-serif;
@@ -11,11 +13,24 @@ body {
     grid-auto-rows: 1fr;
 }
 
+.container > div {
+    background-color: #4e4e50;
+    border-radius: 0.8rem;
+    padding: 3%;
+}
+
+/* Progress indicator */
+
+
+.progress-title {
+    font-size: 1.7rem;
+    margin: 2%;
+}
+
 .progress {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .progress > div {
@@ -44,13 +59,10 @@ body {
 
 .progress-value {
     position: relative;
+    font-size: 2.5rem;
 }
 
-.container > div {
-    background-color: #4e4e50;
-    border-radius: 0.8rem;
-    padding: 3%;
-}
+/* Calendar */
 
 .day, .cal-grid {
     display: grid;
@@ -62,7 +74,16 @@ body {
 .cal-day {
     height: 3vw;
     padding: 10%;
-    background-color:#6f2232 !important;
+    background-color:#6f2232;
+}
+
+
+.cal-day:first-of-type {
+    grid-column: 2;
+}
+
+.cal-day:nth-of-type(3) {
+    background-color: #c3073f;
 }
 
 .calendar {
@@ -74,11 +95,145 @@ body {
     justify-content: center;
 }
 
-.cal-grid div:first-child {
-    grid-column: 6;
-}
+/* E-mails */
 
 .emails {
     grid-column: span 2;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-title {
+    font-size: 1.7rem;
+    margin: 2%;
+}
+
+.email {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 1%;
+}
+
+.email-search {
+    padding: 2%;
+    border-radius: 10rem;
+    border: none;
+    font-size: large;
+    background-color: #3c3c37;
+    color: white;
+}
+
+hr {
+    width: 100%;
+}
+
+/* To-do List */
+
+
+.todo-list-title {
+    font-size: 1.7rem;
+    margin: 2%;
+}
+
+#new-task-name {
+    padding: 4%;
+    padding-right: 0;
+    border-radius: 10rem;
+    border: none;
+    font-size: large;
+    background-color: #3c3c37;
+    color: white;
+}
+
+.todo-list {
     grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tasks {
+    width: 100%;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.task-delete {
+    float: right;
+    font-size:large;
+    padding: 3%;
+}
+
+.todo-list-title {
+    justify-self: center;
+}
+
+.task-delete:hover {
+    background-color: #6f2232;
+    cursor: pointer;
+}
+
+/* Clock */
+
+.clock-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 1.7rem;
+}
+
+.clock {
+    --side: 10vw;
+    --side: 10vw;
+    width: var(--side);
+    height: var(--side);
+    border-radius: 50%;
+    background: conic-gradient(#c3073f 264.6deg, #6f2232 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock::before {
+    content: "";
+    position: absolute;
+    height: calc(var(--side) - 2rem);
+    width: calc(var(--side) - 2rem);
+    background-color: #4e4e50;
+    border-radius: 50%;
+}
+
+#clock-text {
+    position: relative;
+}
+
+/* Upcoming Events */
+
+.events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.events-list {
+    width: 90%;
+}
+
+.events-title {
+    font-size: 1.7rem;
+    margin: 2%;
+}
+
+.event {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }

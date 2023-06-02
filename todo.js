@@ -1,25 +1,29 @@
-document.querySelector('#push').onclick = function(){
-    if(document.querySelector('#newtask input').value.length == 0){
-        alert("Kindly Enter Task Name!!!!")
+let input_field = document.getElementById("new-task-name")
+
+input_field.onkeydown = function(event) {
+    if (event.keyCode == 13) {
+        register_text();
+        input_field.value = '';
     }
+}
 
-    else{
-        document.querySelector('#tasks').innerHTML += `
-            <div class="task">
-                <span id="taskname">
-                    ${document.querySelector('#newtask input').value}
-                </span>
-                <button class="delete">
-                    <i class="far fa-trash-alt"></i>
-                </button>
+
+function register_text() {
+    document.querySelector('#tasks').innerHTML += `
+        <div class="task">
+            <span id="task-name">
+                ${document.querySelector('#newtask input').value}
+            </span>
+            <div class="task-delete">
+            &#x2713;
             </div>
-        `;
+        </div>
+    `;
 
-        var current_tasks = document.querySelectorAll(".delete");
-        for(var i=0; i<current_tasks.length; i++){
-            current_tasks[i].onclick = function(){
-                this.parentNode.remove();
-            }
+    var current_tasks = document.querySelectorAll(".task-delete");
+    for(var i=0; i<current_tasks.length; i++){
+        current_tasks[i].onclick = function(){
+            this.parentNode.remove();
         }
     }
 }
