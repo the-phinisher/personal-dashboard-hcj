@@ -117,12 +117,18 @@ body {
 }
 
 .email-search {
-    padding: 2%;
+    padding: 3%;
+    padding-left: 4%;
+    width: 70%;
     border-radius: 10rem;
     border: none;
     font-size: large;
     background-color: #3c3c37;
     color: white;
+}
+
+.email-search:focus {
+    border: None;
 }
 
 hr {
@@ -137,8 +143,12 @@ hr {
     margin: 2%;
 }
 
+
+
 #new-task-name {
     padding: 4%;
+    padding-left: 5%;
+    width: 90%;
     padding-right: 0;
     border-radius: 10rem;
     border: none;
@@ -156,6 +166,11 @@ hr {
 
 #tasks {
     width: 100%;
+}
+
+#newtask {
+    display: flex;
+    justify-content: center;
 }
 
 .task {
@@ -186,8 +201,6 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: monospace;
-    font-size: 1.7rem;
 }
 
 .clock {
@@ -213,6 +226,8 @@ hr {
 
 #clock-text {
     position: relative;
+    font-family: monospace;
+    font-size: 1.5rem;
 }
 
 /* Upcoming Events */
@@ -236,4 +251,73 @@ hr {
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+/* Monthly Budget */
+
+.budget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.budget-title {
+    font-size: 1.7rem;
+    margin: 2%;
+}
+
+.budget-overview {
+    width: 90%;
+    display:flex;
+    justify-content: right;
+
+}
+
+.budget-spent {
+    margin-top: 2%;
+}
+
+.budget-monthly {
+    font-size: 1.3rem;
+}
+
+.long-term-title, .further-title {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.long-term-list {
+    width: 90%;
+}
+
+.long-term-item {
+    display:flex;
+    justify-content: space-between;
+}
+
+.long-amount {
+    display:flex
+}
+
+.long-expect {
+    margin-top: 3%;
+    margin-right: 2%;
+    font-size: 0.7rem;
+}
+
+.budget-expected {
+    width: 90%;
+    text-align: right;
+}
+
+.further-item {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.further-list {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
 }

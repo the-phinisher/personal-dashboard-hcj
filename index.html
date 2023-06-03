@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,200;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,200;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="./flag_resolver.js"></script>
     <title>Personal Dashboard | Gandhar</title>
 </head>
 <body>
@@ -32,8 +33,6 @@
             <div class="cal-grid" id="cal-grid"></div>
             <script src="make-calendar.js"></script>
         </div>
-        <div class="clock-container"><div class="clock"><div id="clock-text" onload="showTime()"></div></div></div>
-        <script src="clock.js"></script>
         <div class="emails">
             <div class="email-title">Emails</div>
             <input class="email-search" placeholder="Search mail"></input>
@@ -49,6 +48,8 @@
             </div>
             <hr>
         </div>
+        <div class="clock-container"><div class="clock"><div id="clock-text" onload="showTime()"></div></div></div>
+        <script src="clock.js"></script>
         <div class="todo-list">
             <div class="todo-list-title">Tasks</div>
             <div id="newtask">
@@ -77,6 +78,35 @@
                 </div>
                 <hr>
                 
+            </div>
+        </div>
+        <div class="budget">
+            <div class="budget-title">Monthly Budget</div>
+            <div class="budget-overview">
+                <div class="budget-spent">3200</div>
+                <div class="budget-monthly">/5000</div>
+            </div>
+            <hr>
+            <div class="further-title">Further expected spendings</div>
+            <div class="further-list">
+                <div class="further-item">
+                    <div class="further-item-name">Repair Cycle</div>
+                    <div class="further-item-cost">400</div>
+                </div>
+            </div>
+            <hr>
+            <div class="budget-expected">3600</div>
+            <hr>
+            <div class="long-term-title">Longer term savings</div>
+            <div class="long-term-list">
+                <div class="long-term-item">
+                    <div class="long-name">Laptop</div>
+                    <div class="long-amount">
+                        <div class="long-expect">+10000</div>
+                        <div class="long-saved">32000</div>
+                        <div class="long-total">/75000</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
