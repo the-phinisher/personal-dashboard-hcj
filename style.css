@@ -34,7 +34,7 @@ body {
 }
 
 .progress > div {
-    margin: 5%;
+    margin-top:3%;
 }
 
 .progress-indicator {
@@ -62,6 +62,48 @@ body {
     font-size: 2.5rem;
 }
 
+/* Health indicator */
+
+.health-title {
+    font-size: 1.7rem;
+    margin: 2%;
+}
+
+.health {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.health > div {
+    margin-top:3%;
+}
+
+.health-indicator {
+    --side: 10vw;
+    width: var(--side);
+    height: var(--side);
+    border-radius: 50%;
+    background: conic-gradient(#c3073f 194.4deg, #6f2232 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.health-indicator::before {
+    content: "";
+    position: absolute;
+    height: calc(var(--side) - 2rem);
+    width: calc(var(--side) - 2rem);
+    background-color: #4e4e50;
+    border-radius: 50%;
+}
+
+.health-value {
+    position: relative;
+    font-size: 2.5rem;
+}
+
 /* Calendar */
 
 .day, .cal-grid {
@@ -75,6 +117,7 @@ body {
     height: 3vw;
     padding: 10%;
     background-color:#6f2232;
+    border-radius: 0.5rem;
 }
 
 
@@ -92,7 +135,35 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+}
+
+.day {
+    /* background-color: aqua; */
+    margin-bottom: 4%;
+    text-align: center;
+    font-weight: 800;
+}
+
+.calendar > hr {
+    margin-top: 2%;
+}
+
+.specials {
+    display: flex;
+    flex-direction: column;
+    width: 50%
+}
+
+.special {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.month {
+    margin-bottom: 8%;
+    font-size: 1.7rem;
 }
 
 /* E-mails */
@@ -320,4 +391,89 @@ hr {
     width: 90%;
     display: flex;
     flex-direction: column;
+}
+
+/* Quote */
+
+.quote {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1d !important;
+    font-family:cursive;
+    font-size: 2rem;
+}
+
+.quote-author {
+    font-size: 1.2rem;
+    align-self: self-end;
+}
+
+.weather {
+    margin-top: 5%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.humidity {
+    margin-top: 5%;
+}
+
+/* Quick Search */
+
+.quick-search {
+    grid-column: span 2;
+}
+
+.quick-searches {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.quick-searches > div > input {
+    border: none;
+    width: 100%;
+    background-color: #3c3c37;
+    border-radius: 10rem;
+    color: white;
+    padding: 4%;
+    font-size: 1.1rem;
+}
+
+.quick-searches > div {
+    display: flex;
+    justify-content: center;
+}
+
+.chatgpt {
+    grid-column: span 2;
+}
+
+.chatgpt > input {
+    padding: none;
+}
+
+input:focus {
+    border: none;
+}
+
+/* Notifications */
+.notifs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notifs-list {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
 }
