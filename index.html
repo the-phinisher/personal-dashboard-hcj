@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,200;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="./flag_resolver.js"></script>
     <title>Personal Dashboard | Gandhar</title>
 </head>
 <body>
@@ -32,21 +31,22 @@
             </div>
             <div class="cal-grid" id="cal-grid"></div>
             <script src="make-calendar.js"></script>
+            <hr>
+            <div class="specials">
+                <div class="special">
+                    <div class="special-name">Nirbhay's birthday</div>
+                    <div class="special-date">13th May</div>
+                </div>
+            </div>
         </div>
-        <div class="emails">
-            <div class="email-title">Emails</div>
-            <input class="email-search" placeholder="Search mail"></input>
-            <hr>
-            <div class="email">
-                <div class="email-text">E-Cell: Last Day to ...</div>
-                <div class="email-date">1th Jun</div>
+        <div class="quote">
+            <div class="quote-text">"To be or not to be, is the question"</div>
+            <div class="quote-author">- Shakespeare</div>
+            <div class="weather">
+                <div class="sunny"></div>
+                <div class="temperature"> 34&deg;C, feels like 47&deg;C</div>
+                <div class="humidity">40% Humidity</div>
             </div>
-            <hr>
-            <div class="email">
-                <div class="email-text">Prof: Exam paper collec...</div>
-                <div class="email-date">31st May</div>
-            </div>
-            <hr>
         </div>
         <div class="clock-container"><div class="clock"><div id="clock-text" onload="showTime()"></div></div></div>
         <script src="clock.js"></script>
@@ -80,6 +80,32 @@
                 
             </div>
         </div>
+        <div class="emails">
+            <div class="email-title">Emails</div>
+            <input class="email-search" placeholder="Search mail"></input>
+            <hr>
+            <div class="email">
+                <div class="email-text">E-Cell: Last Day to ...</div>
+                <div class="email-date">1th Jun</div>
+            </div>
+            <hr>
+            <div class="email">
+                <div class="email-text">Prof: Exam paper collec...</div>
+                <div class="email-date">31st May</div>
+            </div>
+            <hr>
+        </div>
+        <div class="quick-search">
+            <div class="quick-searches">
+                <div class="google"><input type="text" placeholder="Search google"></div>
+                <div class="youtube"><input type="text" placeholder="Search youtube"></div>
+                <div class="github"><input type="text" placeholder="Search github"></div>
+                <div class="stackoverflow"><input type="text" placeholder="Search stackoverflow"></div>
+                <div class="google-scholar"><input type="text" placeholder="Search google scholar"></div>
+                <div class="academia"><input type="text" placeholder="Search academia"></div>
+                <div class="chatgpt"><input type="text" placeholder="Chat with ChatGPT"></div>
+            </div>
+        </div>
         <div class="budget">
             <div class="budget-title">Monthly Budget</div>
             <div class="budget-overview">
@@ -107,6 +133,26 @@
                         <div class="long-total">/75000</div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="health">
+            <div class="health-title">Health</div>
+            <div class="health-indicator">
+                <span class="health-value">54%</span>
+            </div>
+        </div>
+        <div class="notifs">
+            <div class="notifs-title">Notifications</div>
+            <div class="notifs-list">
+                <hr>
+                <div class="notif">
+                    Delivery arriving today at 9pm
+                </div>
+                <hr>
+                <div class="notif">
+                    Upcoming due date, E-cell at noon.
+                </div>
+                <hr>
             </div>
         </div>
     </div>
